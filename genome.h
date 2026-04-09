@@ -21,10 +21,20 @@ public:
     void set_blue(int index, int value); 
     int get_blue(int index); 
     void print();
+    void set_mRate(double val); //sets the mRate equal to val
+    double get_mRate(); //returns the current mRate value
+    void mutate_gene(int index);
+    void mutate();
+    double calculate_gene_fitness(int index, Pixel targetPixel);
+    double calculate_overall_fitness(Pixel* target, int nPixels);
+    void set_pixel(int index, Pixel newPixel);
+    Pixel get_pixel(int index);
+
 
 private:
     Pixel* genes; // pointer to the array of Pixels
     int nGenes;   // stores the num of Pixels in array
+    double mRate; //to store a number between 0 and 1 for the mutation rate
 };
 
 #endif
