@@ -8,7 +8,6 @@ using namespace std;
 genome::genome() {
     genes = NULL;
     nGenes = 0;
-    mRate = 0;
 }
 
 // destructor (automatically cleans up memory)
